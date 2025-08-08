@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Booking System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="logo">
+    <img src="logo1.jpg" alt="Company Logo" width="100" height="54" style="float: left;">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="vs.html" id="logo"><span>PackUrBags</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link active" href="vs.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+            <li class="nav-item"><a class="nav-link" href="package.html">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search">
+            <button class="btn btn-primary" type="button">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <header>
+    <h1>Travel Management System</h1>
+    <h2>Your Gateway to the World</h2>
+    <h1>Explore the World with Our Amazing Travel Packages!</h1>
+  </header>
+
+  <section id="destinations" class="section">
+    <h2>Top Destinations</h2>
+    <div class="destination-grid d-flex flex-wrap gap-4 justify-content-center">
+      <div class="destination-card">
+        <img src="paris.jpg" alt="Paris">
+        <h3>Paris, France</h3>
+        <p>The city of love, fashion, and culture. Visit Eiffel Tower, Louvre Museum, and Champs-Élysées.</p>
+      </div>
+      <div class="destination-card">
+        <img src="mal2.jpg" alt="Maldives">
+        <h3>Maldives</h3>
+        <p>Crystal clear waters and serene beaches. Visit Maafushi, Male Atoll, and enjoy water villas.</p>
+      </div>
+      <div class="destination-card">
+        <img src="tokyo.jpg" alt="Tokyo">
+        <h3>Tokyo, Japan</h3>
+        <p>A bustling city with tradition and innovation. Explore Shibuya Crossing, Tokyo Tower, and Asakusa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities" class="section">
+    <h2>Exciting Activities</h2>
+    <div class="activities-list d-flex flex-wrap gap-4 justify-content-center">
+      <div class="activity-card">
+        <img src="hike.jpg" alt="Hiking">
+        <h3>Mountain Hiking</h3>
+        <p>Discover scenic mountain trails and enjoy breathtaking views.</p>
+      </div>
+      <div class="activity-card">
+        <img src="dive.jpg" alt="Scuba Diving">
+        <h3>Scuba Diving</h3>
+        <p>Explore the underwater world and encounter vibrant marine life.</p>
+      </div>
+      <div class="activity-card">
+        <img src="tour.jpg" alt="City Tours">
+        <h3>City Tours</h3>
+        <p>Guided tours to explore the hidden gems of the world's greatest cities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="Our Services" class="section">
+    <h2>Our Services</h2>
+    <div class="services-grid d-flex flex-wrap gap-4 justify-content-center">
+      <div class="services-card">
+        <img src="flight.jpg" alt="Flight Booking">
+        <h3>Flight Booking</h3>
+        <p>Get the best deals on international and domestic flights.</p>
+      </div>
+      <div class="services-card">
+        <img src="hotel.jpg" alt="Hotel Reservations">
+        <h3>Hotel Reservations</h3>
+        <p>We provide you with a wide range of accommodation options.</p>
+      </div>
+      <div class="services-card">
+        <img src="package.jpg" alt="Tour Packages">
+        <h3>Tour Packages</h3>
+        <p>Explore personalized tour packages designed to suit your preferences.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <p>If you have any questions, please reach out to us:</p>
+    <p>Email: packurbags@gmail.com | Phone: 9849119547</p>
+  </section>
+
+  <footer>
+    <p>© 2024 Travel Management System. All Rights Reserved.</p>
+    <h4>Explora el mundo con nosotras</h4>
+  </footer>
+
+  <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
+  <button id="scrollTopBtn" title="Scroll to Top">⬆</button>
+
+  <script>
+    const toggleBtn = document.getElementById('darkModeToggle');
+    toggleBtn.onclick = () => document.body.classList.toggle('dark-mode');
+
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      scrollTopBtn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+    };
+    scrollTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+</body>
+
+</html>

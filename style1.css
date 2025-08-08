@@ -1,0 +1,288 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('tbsbg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* DARK MODE STYLES */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+  background-image: none;
+}
+
+body.dark-mode header,
+body.dark-mode .section,
+body.dark-mode .booking-form,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .navbar a {
+  background-color: #000 !important;
+  color: #f0f0f0 !important;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+header h1 {
+  color: #f9d71c;
+  font-size: 2.5rem;
+}
+
+header h2 {
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #000 !important;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f9d71c !important;
+  font-size: 1.05rem;
+}
+
+/* SECTION */
+.section {
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+body.dark-mode .section {
+  background-color: #1a1a1a;
+}
+
+/* GRID SECTION */
+.destination-grid,
+.activities-list,
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.destination-card,
+.activity-card,
+.services-card {
+  flex: 1 1 300px;
+  max-width: 320px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+body.dark-mode .destination-card,
+body.dark-mode .activity-card,
+body.dark-mode .services-card {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+.destination-card img,
+.activity-card img,
+.services-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.destination-card img:hover,
+.activity-card img:hover,
+.services-card img:hover {
+  transform: scale(1.05);
+}
+
+/* BOOKING FORM */
+.booking-form {
+  max-width: 700px;
+  margin: auto;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.booking-form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #222;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.booking-form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+.booking-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.booking-form textarea {
+  resize: vertical;
+}
+
+body.dark-mode .booking-form {
+  background-color: #222;
+  color: #ddd;
+}
+
+body.dark-mode .booking-form input,
+body.dark-mode .booking-form select,
+body.dark-mode .booking-form textarea {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* FOOTER */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* TOGGLE BUTTON */
+#darkModeToggle {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#darkModeToggle:hover {
+  background-color: #444;
+}
+
+/* SCROLL TO TOP */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#scrollTopBtn:hover {
+  background-color: #0056b3;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .destination-card,
+  .activity-card,
+  .services-card {
+    max-width: 100%;
+  }
+
+  .booking-form {
+    padding: 1rem;
+  }
+}
+
+
+.book-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+body.dark-mode .book-btn {
+  background-color: #1e90ff;
+  color: #fff;
+}
+
+body.dark-mode .book-btn:hover {
+  background-color: #3399ff;
+}
